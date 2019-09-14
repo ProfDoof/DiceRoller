@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@color/lightRed"/>
+
+    <item>
+        <bitmap
+            android:gravity="fill"
+            android:src="@drawable/john_marsden_war"/>
+    </item>
+
+    <item>
+        <bitmap
+            android:gravity="start"
+            android:src="@drawable/droid20"
+            android:antialias="true"/>
+    </item>
+</layer-list>
