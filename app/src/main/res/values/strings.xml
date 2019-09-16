@@ -2,4 +2,5 @@
     <string name="app_name">D20 Roller</string>
     <string name="dice_default_value">7</string>
     <string name="dice_image_c_desc">background dice image</string>
+    <string name="critical_value_default"></string>
 </resources>

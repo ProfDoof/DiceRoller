@@ -17,6 +17,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     private ImageView imageViewDice;
     private TextView textViewDiceValue;
+    private TextView textViewCriticalValue;
     private MediaPlayer mediaPlayer;
     private Random rnJesus = new Random();
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         imageViewDice = findViewById(R.id.diceImage);
         textViewDiceValue = findViewById(R.id.diceValueTextView);
+        textViewCriticalValue = findViewById(R.id.criticalValueTextView);
         mediaPlayer = MediaPlayer.create(this, R.raw.dice_roll_sound_trimmed);
 
         imageViewDice.setSoundEffectsEnabled(false);
@@ -73,15 +75,15 @@ public class MainActivity extends AppCompatActivity {
     private void rollAndUpdateDice() {
         int randomNumberForDice = rnJesus.nextInt(20)+1;
         textViewDiceValue.setText(Integer.toString(randomNumberForDice));
-
+        textViewCriticalValue.setText(" ");
         if (randomNumberForDice == 20) {
             mediaPlayer = MediaPlayer.create(this, R.raw.nerf_this);
-            Toast.makeText(this, "CRITICAL SUCCESS!!!!", Toast.LENGTH_LONG).show();
+            textViewCriticalValue.setText("CRITICAL SUCCESS!!!");
             mediaPlayer.start();
         }
         else if (randomNumberForDice == 1) {
             mediaPlayer = MediaPlayer.create(this, R.raw.sad_trombone);
-            Toast.makeText(this, "CRITICAL FAILURE!!!!", Toast.LENGTH_LONG).show();
+            textViewCriticalValue.setText("CRITICAL FAILURE!!!!");
             mediaPlayer.start();
         }
     }
