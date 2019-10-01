@@ -14,7 +14,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:textColor="#6B0808"
-        android:text="@string/critical_value_default"
         android:fontFamily="sans-serif-medium"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,5 +45,19 @@
         app:layout_constraintEnd_toEndOf="@+id/diceImage"
         app:layout_constraintStart_toStartOf="@+id/diceImage"
         app:layout_constraintTop_toTopOf="@+id/diceImage" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/statsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/d20image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
